@@ -28,7 +28,11 @@ const starSign = (birthDay, birthMonth) => {
             return 'It seems like you have no star sign? Maybe you are from out of this world! Or try to put in a valid birthdate...';
         }
     };
+// enther here birtday, month and name
+const zodiac = starSign(30, 7);
+const name = "Lynn";
 
+// ranom activity and mood generator
 let mood = ["enthousastic", "joyful", "interesting", "inspirational", ]
 let fireActivity = ["vitit a sauna", "climb a vulcano", "make a campfire", "make candles"]
 let airActivity = ["fly a plane", "go bungyjumping", "go paragliding", "make a hot air balloon trip"]
@@ -42,3 +46,18 @@ let radomAir = airActivity[random]
 let randomWater = waterActivity[random]
 let randomEarth = earthActivity[random]
 let randomMood = mood[random]
+
+
+const createPersonalMessage = () => {
+    if (zodiac === "Aries" || zodiac === "Leo" || zodiac === "Sagittarius") {
+        console.log(`Hey ${name}! Today will be a very ${randomMood} day. The universe suggest that you will go ${radomFire}. Good luck!`)
+    } else if (zodiac === "Taurus" || zodiac === "Virgo" || zodiac === "Capricorn") {
+        console.log(`Hey ${name}! Today will be a very ${randomMood} day. The universe suggest that you will go ${randomEarth}. Good luck!`)
+    } else if (zodiac === "Gemini" || zodiac === "Libra" || zodiac === "Aquarius") {
+        console.log(`Hey ${name}! Today will be a very ${randomMood} day. The universe suggest that you will go ${radomAir}. Good luck!`)
+    } else if (zodiac === "Cancer" || zodiac === "Scorpio" || zodiac === "Pisces") {
+        console.log(`Hey ${name}! Today will be a very ${randomMood} day. The universe suggest that you will go ${randomWater}. Good luck!`)
+    }
+}
+
+console.log(createPersonalMessage());

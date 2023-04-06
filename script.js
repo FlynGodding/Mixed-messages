@@ -29,4 +29,16 @@ const starSign = (birthDay, birthMonth) => {
         }
     };
 
-    
+let mood = ["enthousastic", "joyful", "interesting", "inspirational", ]
+let fireActivity = ["vitit a sauna", "climb a vulcano", "make a campfire", "make candles"]
+let airActivity = ["fly a plane", "go bungyjumping", "go paragliding", "make a hot air balloon trip"]
+let waterActivity = ["go surfing", "go sailing", "go swimming", "go snorkelling"]
+let earthActivity = ["take a hike", "dig a hole", "mountain climbing", "take a mud bath"]
+
+let random = Math.floor(Math.random() * 4)
+
+let radomFire = fireActivity[random]
+let radomAir = airActivity[random]
+let randomWater = waterActivity[random]
+let randomEarth = earthActivity[random]
+let randomMood = mood[random]

@@ -29,8 +29,8 @@ const starSign = (birthDay, birthMonth) => {
         }
     };
 // enther here birtday, month and name
-const zodiac = starSign(30, 7);
-const name = "Lynn";
+const zodiac = starSign(19, 12);
+const name = "Seb";
 
 // ranom activity and mood generator
 let mood = ["enthousastic", "joyful", "interesting", "inspirational", ]
@@ -39,16 +39,18 @@ let airActivity = ["fly a plane", "go bungyjumping", "go paragliding", "make a h
 let waterActivity = ["go surfing", "go sailing", "go swimming", "go snorkelling"]
 let earthActivity = ["take a hike", "dig a hole", "mountain climbing", "take a mud bath"]
 
-let random = Math.floor(Math.random() * 4)
-
-let radomFire = fireActivity[random]
-let radomAir = airActivity[random]
-let randomWater = waterActivity[random]
-let randomEarth = earthActivity[random]
-let randomMood = mood[random]
-
 
 const createPersonalMessage = () => {
+
+    let random = Math.floor(Math.random() * 4)
+
+    let radomFire = fireActivity[random]
+    let radomAir = airActivity[random]
+    let randomWater = waterActivity[random]
+    let randomEarth = earthActivity[random]
+    let randomMood = mood[random]
+
+
     if (zodiac === "Aries" || zodiac === "Leo" || zodiac === "Sagittarius") {
         console.log(`Hey ${name}! Today will be a very ${randomMood} day. The universe suggest that you will go ${radomFire}. Good luck!`)
     } else if (zodiac === "Taurus" || zodiac === "Virgo" || zodiac === "Capricorn") {
@@ -60,4 +62,4 @@ const createPersonalMessage = () => {
     }
 }
 
-console.log(createPersonalMessage());
+createPersonalMessage()
